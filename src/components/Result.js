@@ -1,27 +1,67 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Result extends Component {
+
+// const defaultProps = {
+//     loan : 0,
+//     prinInterest: 0,
+//     monthlyTax: 0,
+//     monthlyInsurance: 0,
+//     total: 0
+//   };
+
+
+// class Result extends Component {
     
-    constructor(props) {
-        super(props);
-        this.state = {
-        
-        };
-    }
-    render() {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//         };
+//     }
 
-        return(
+   
+//     render() {
 
-            <div>
-                <h1>Result</h1>
-                {/* <p>{this.props.h}</p> */}
-            </div>
-        )
+//         return(
 
-    }
+//             <div>
+//                 <h1>Result</h1>
+//                 <p>Loan Amount: ${this.props.loan}</p>
+//                 <p>Principal and Interest: ${this.props.prinInterest}</p>
+//                 <p>Monthly Tax: ${this.props.monthlyTax}</p>
+//                 <p>Monthly Insurance: ${this.props.monthlyInsurance}</p>
+//                 <p>Total Payment: ${this.props.total}</p>
+//             </div>
+//         )
+
+//     }
 
 
-}
+// }
+
+
+const Result = (props) => {
+    return (
+      <div>
+          <h1>Result</h1>
+                 <p>Loan Amount: ${props.loan}</p>
+                 <p>Principal and Interest: ${props.prinInterest}</p>
+                 <p>Monthly Tax: ${props.monthlyTax}</p>
+                 <p>Monthly Insurance: ${props.monthlyInsurance}</p>
+                 <p>Total Payment: ${props.total}</p>
+      </div>
+    )
+  };
+
+  Result.defaultProps = {
+        loan : 0,
+        prinInterest: 0,
+        monthlyTax: 0,
+        monthlyInsurance: 0,
+        total: 0
+      };
+
+// Result.defaultProps = defaultProps;
+
 
 
 
