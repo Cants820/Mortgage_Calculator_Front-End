@@ -5,7 +5,7 @@ class Result extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+        
         };
     }
     render() {
@@ -13,7 +13,8 @@ class Result extends Component {
         return(
 
             <div>
-                <h1>Result Page</h1>
+                <h1>Result</h1>
+                {/* <p>{this.props.h}</p> */}
             </div>
         )
 
@@ -21,5 +22,7 @@ class Result extends Component {
 
 
 }
+
+
 
 export default Result;
