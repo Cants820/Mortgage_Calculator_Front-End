@@ -1,53 +1,24 @@
 import React from 'react';
-
-
-// const defaultProps = {
-//     loan : 0,
-//     prinInterest: 0,
-//     monthlyTax: 0,
-//     monthlyInsurance: 0,
-//     total: 0
-//   };
-
-
-// class Result extends Component {
-    
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//         };
-//     }
-
-   
-//     render() {
-
-//         return(
-
-//             <div>
-//                 <h1>Result</h1>
-//                 <p>Loan Amount: ${this.props.loan}</p>
-//                 <p>Principal and Interest: ${this.props.prinInterest}</p>
-//                 <p>Monthly Tax: ${this.props.monthlyTax}</p>
-//                 <p>Monthly Insurance: ${this.props.monthlyInsurance}</p>
-//                 <p>Total Payment: ${this.props.total}</p>
-//             </div>
-//         )
-
-//     }
-
-
-// }
-
+import { Navbar, NavbarBrand,ListGroup,ListGroupItem } from 'reactstrap';
 
 const Result = (props) => {
     return (
       <div>
-          <h1>Result</h1>
-                 <p>Loan Amount: ${props.loan}</p>
-                 <p>Principal and Interest: ${props.prinInterest}</p>
-                 <p>Monthly Tax: ${props.monthlyTax}</p>
-                 <p>Monthly Insurance: ${props.monthlyInsurance}</p>
-                 <p>Total Payment: ${props.total}</p>
+          <Navbar color="light" light expand="md">
+          <NavbarBrand className="display-3"><b>Results</b></NavbarBrand>
+          </Navbar>
+          <br/>       
+                 
+                
+                 
+
+                 <ListGroup>
+                    <ListGroupItem><p>Loan Amount: ${props.loan}</p></ListGroupItem>
+                    <ListGroupItem><p>Principal and Interest: ${props.prinInterest}</p></ListGroupItem>
+                    <ListGroupItem><p>Monthly Tax: ${props.monthlyTax}</p></ListGroupItem>
+                    <ListGroupItem><p>Monthly Insurance: ${props.monthlyInsurance}</p></ListGroupItem>
+                    <ListGroupItem><p>Total Payment: ${props.total}</p></ListGroupItem>
+                  </ListGroup>
       </div>
     )
   };
@@ -59,8 +30,6 @@ const Result = (props) => {
         monthlyInsurance: 0,
         total: 0
       };
-
-// Result.defaultProps = defaultProps;
 
 
 

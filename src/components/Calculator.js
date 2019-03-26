@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {Container,Row,Col} from 'reactstrap';
 
 //elements needed for a bootstrap-react form
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import Result from './Result';
 import calculations from '../utils/calculations';
 
@@ -78,23 +78,22 @@ class Calculator extends Component {
                                 } />
                             </FormGroup>
                             <FormGroup>
-                                <Label for="interest-rate">Interest Rate:</Label>
+                                <Label for="interest-rate">Interest Rate: (%)</Label>
                                 <Input type="input" name="interest-rate" id="interestR" value={this.state.interestRate} onChange={event => this.setState({ interestRate: event.target.value, show:true, mortgage: cal })} />
                             </FormGroup>
                             <FormGroup>
-                                <Label for="loan-term">Loan Term:</Label>
+                                <Label for="loan-term">Loan Term: (Years)</Label>
                                 <Input type="input" name="loan-term" id="loanT" value={this.state.loanTerm} onChange={event => this.setState({ loanTerm: event.target.value, show:true, mortgage: cal })} />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="add-pay">Additional Principal Payment:</Label>
                                 <Input type="input" name="add-pay" id="addPP" value={this.state.additionalPrincipalPayment} onChange={event => this.setState({ additionalPrincipalPayment: event.target.value, show:true, mortgage: cal })} />
                             </FormGroup>
-                            <Button onClick={this.onClick}>Submit</Button>
+                            
                         </Form>
                 
 
-                <button onClick={this.reset}>Reset</button>
-                <button onClick={this.onCalculate}>Calculator</button>
+                
                 </Col>
                 {/* Results using a ternary operator to load <Result> from an onclick */}
                 <Col>
